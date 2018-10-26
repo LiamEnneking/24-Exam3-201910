@@ -87,16 +87,21 @@ And this one for n=14:
     for h in range(n, 0, -1):
         string = ''
         for k in range(h-1):
-            if
-                string = string + ' '
+            string = string + ' '
         for i in range(0, n-h+1):
-            string = string + str(i+1)
+            if i < 9:
+                string = string + str(i+1)
+            if i > 9:
+                string = string + str(i-10)
         string = string + ' '
         for i in range(0, n-h+1):
             string = string + '*'
         string = string + ' '
-        for g in range(n-h):
-            string = string + 'd'
+        for k in range(h-1):
+            if k > 9:
+                string = string + str(k)
+            if k < 9:
+                string = string + str(k+1)
         print(string)
 
 

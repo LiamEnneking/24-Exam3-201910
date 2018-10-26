@@ -217,16 +217,12 @@ def problem5(x):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
-    y = str(x)
-    x1 = y[0]
-    x2 = y[1]
-    print(x1)
     while True:
-        if is_prime(int(x1)*int(x2)) is True:
-            break
+        test = sum_of_digits(x)
+        if is_prime(test) is True and is_prime(x) is True:
+            return x
         else:
             x = x + 1
-    return x
 
 
 
